@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ORGANIZEME"
+            android:padding="30dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"/>
+
+        <!--            drawableStart - to put an image at the start of a text view-->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/idTVDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="#E3BC9A"
+        android:layout_marginTop="70dp"
+        android:text="Welcome to your Virtual P.A"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="113dp"
+            android:orientation="vertical">
+
+            <!-- Add CalendarView to display the Calendar -->
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idTVDate" />
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="13dp"
+                        android:id="@+id/card_tasks"
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/tasks"
+                            android:layout_marginLeft="30dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="105dp"
+                            android:text="My Tasks"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:id="@+id/card_appointments"
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/tasks"
+                            android:layout_marginLeft="30dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="105dp"
+                            android:text="My Appointments"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="40dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="13dp"
+                        android:id="@+id/card_events"
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/tasks"
+                            android:layout_marginLeft="30dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="105dp"
+                            android:text="My Events"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:id="@+id/card_schedule"
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/tasks"
+                            android:layout_marginLeft="30dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="105dp"
+                            android:text="My Schedule"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+    <include layout="@layout/bottomsheet"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
